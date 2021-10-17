@@ -29,6 +29,7 @@ namespace ClickerGame
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmClicker));
             this.btnClicker = new System.Windows.Forms.Button();
             this.lblPoints = new System.Windows.Forms.Label();
@@ -38,6 +39,7 @@ namespace ClickerGame
             this.lblNeededToUpgrade = new System.Windows.Forms.Label();
             this.lblOwned = new System.Windows.Forms.Label();
             this.lblInfoNeeded = new System.Windows.Forms.Label();
+            this.tmrAutoClick = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // btnClicker
@@ -114,6 +116,10 @@ namespace ClickerGame
             this.lblInfoNeeded.TabIndex = 20;
             this.lblInfoNeeded.Text = "Points needed for next upgrade:";
             // 
+            // tmrAutoClick
+            // 
+            this.tmrAutoClick.Interval = 1000;
+            // 
             // frmClicker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -131,6 +137,7 @@ namespace ClickerGame
             this.Name = "frmClicker";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cookie Clicker";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmClicker_FormClosing);
             this.Load += new System.EventHandler(this.frmApplication_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -147,6 +154,7 @@ namespace ClickerGame
         private System.Windows.Forms.Label lblNeededToUpgrade;
         private System.Windows.Forms.Label lblOwned;
         private System.Windows.Forms.Label lblInfoNeeded;
+        private System.Windows.Forms.Timer tmrAutoClick;
     }
 }
 

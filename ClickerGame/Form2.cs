@@ -12,57 +12,49 @@ namespace ClickerGame
 {
     public partial class frmShop : Form
     {
-        public static int f1Points;
-        public static int f1AutoClick;
+        public static int autoClick;
         public static int pointsNeeded;
 
         public static string item;
         public static string selectedItem;
         public static int searchAmount;
+        private SaveData _saveData;
 
-        public frmShop()
+        public frmShop(ref SaveData saveData)
         {
             InitializeComponent();
+
+            // Disable window maximization.
             this.MaximizeBox = false;
 
-            f1Points = frmClicker.count;
-            f1AutoClick = frmClicker.autoClick;
+            _saveData = saveData;
+            lbxItems.Items.Clear();
+            foreach(var item in _saveData.ShopData.Items)
+                lbxItems.Items.Add(item.Name);
         }
 
         private void frmShop_Load(object sender, EventArgs e)
         {
+            // Set the size of the form programmatically.
             this.Width = 230;
             this.Height = 315;
         }
 
         private void btnBuy_Click(object sender, EventArgs e)
         {
-            if (f1Points >= pointsNeeded)
+
+            var item = _saveData.ShopData.Items.First(x => x.Name == selectedItem);
+            if (_saveData.CookieCount >= item.Price)
             {
                 try
                 {
-                    f1Points -= pointsNeeded;
+                    _saveData.CookieCount -= item.Price;
+                    if (!_saveData.BoughtItems.ContainsKey(item.Name))
+                        _saveData.BoughtItems.Add(item.Name, 0);
+                    else
+                        _saveData.BoughtItems[item.Name]++;
 
-                    switch (selectedItem)
-                    {
-                        default:
-                            break;
-                        case "Google Click Bot":
-                            f1AutoClick = 1;
-                            break;
-                        case "Juice Creator Bot":
-                            f1AutoClick = 2;
-                            break;
-                        case "Stepsis":
-                            f1AutoClick = 5;
-                            break;
-                        case "Cow Milker":
-                            f1AutoClick = 10;
-                            break;
-                        case "Russian Dancer":
-                            f1AutoClick = 20;
-                            break;
-                    }
+
 
                     this.Close();
                 }
@@ -73,39 +65,14 @@ namespace ClickerGame
             }
             else
             {
-                MessageBox.Show($"Not enought points, you need {pointsNeeded} for this item.", "Stop", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                MessageBox.Show($"Not enought points, you need {item.Price} points for this item.", "Stop", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
         }
 
         private void lbxItems_SelectedIndexChanged(object sender, EventArgs e)
         {
             selectedItem = lbxItems.SelectedItem.ToString();
-
-            switch (selectedItem)
-            {
-                default:
-                    break;
-                case "Google Click Bot":
-                    lblExplained.Text = "When buyinh this bot you will get:\n1 click per second automatically.";
-                    pointsNeeded = 50;
-                    break;
-                case "Juice Creator Bot":
-                    lblExplained.Text = "When buying this bot you will get:\n2 clicks per second automatically.";
-                    pointsNeeded = 100;
-                    break;
-                case "Stepsis":
-                    lblExplained.Text = "When buying her you will get:\n5 clicks per second automatically";
-                    pointsNeeded = 250;
-                    break;
-                case "Cow Milker":
-                    lblExplained.Text = "When buying this milker you will get:\n10 clicks per second automatically";
-                    pointsNeeded = 500;
-                    break;
-                case "Russian Dancer":
-                    lblExplained.Text = "When buying this dancer you will get:\n20 clicks per second automatically";
-                    pointsNeeded = 1000;
-                    break;
-            }
+            lblExplained.Text = _saveData.ShopData.Items.First(x => x.Name == selectedItem).Description;
         }
     }
 }

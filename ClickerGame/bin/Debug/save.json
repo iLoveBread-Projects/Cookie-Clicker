@@ -1,0 +1,43 @@
+{
+  "PointsPerClick": 1,
+  "CookieCount": 14,
+  "ClickerCount": 0,
+  "ShopData": {
+    "PointsNeeded": 50,
+    "Items": [
+      {
+        "Name": "Google Click Bot",
+        "CookiesPerSecond": 1,
+        "Price": 50,
+        "Description": "When buying this bot you will get:\n1 click per second automatically."
+      },
+      {
+        "Name": "Juice Creator Bot",
+        "CookiesPerSecond": 2,
+        "Price": 100,
+        "Description": "When buying this bot you will get:\n2 clicks per second automatically."
+      },
+      {
+        "Name": "Stepsis",
+        "CookiesPerSecond": 5,
+        "Price": 250,
+        "Description": "When buying her you will get:\n5 clicks per second automatically"
+      },
+      {
+        "Name": "Cow Milker",
+        "CookiesPerSecond": 10,
+        "Price": 500,
+        "Description": "When buying this milker you will get:\n10 clicks per second automatically"
+      },
+      {
+        "Name": "Russian Dancer",
+        "CookiesPerSecond": 20,
+        "Price": 1000,
+        "Description": "When buying this dancer you will get:\n20 clicks per second automatically"
+      }
+    ]
+  },
+  "BoughtItems": {
+    "Google Click Bot": 5
+  }
+}

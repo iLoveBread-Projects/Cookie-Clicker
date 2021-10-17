@@ -33,6 +33,7 @@ namespace ClickerGame
             this.lbxItems = new System.Windows.Forms.ListBox();
             this.lblInfo = new System.Windows.Forms.Label();
             this.lblExplained = new System.Windows.Forms.Label();
+            this.lblAutoValue = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnBuy
@@ -73,17 +74,28 @@ namespace ClickerGame
             // lblExplained
             // 
             this.lblExplained.AutoSize = true;
-            this.lblExplained.Location = new System.Drawing.Point(15, 183);
+            this.lblExplained.Location = new System.Drawing.Point(12, 188);
             this.lblExplained.Name = "lblExplained";
             this.lblExplained.Size = new System.Drawing.Size(61, 13);
             this.lblExplained.TabIndex = 6;
             this.lblExplained.Text = "*Explained*";
+            // 
+            // lblAutoValue
+            // 
+            this.lblAutoValue.AutoSize = true;
+            this.lblAutoValue.Location = new System.Drawing.Point(12, 220);
+            this.lblAutoValue.Name = "lblAutoValue";
+            this.lblAutoValue.Size = new System.Drawing.Size(64, 13);
+            this.lblAutoValue.TabIndex = 7;
+            this.lblAutoValue.Text = "*AutoValue*";
+            this.lblAutoValue.Visible = false;
             // 
             // frmShop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(210, 265);
+            this.Controls.Add(this.lblAutoValue);
             this.Controls.Add(this.lblExplained);
             this.Controls.Add(this.lblInfo);
             this.Controls.Add(this.lbxItems);
@@ -104,5 +116,6 @@ namespace ClickerGame
         private System.Windows.Forms.ListBox lbxItems;
         private System.Windows.Forms.Label lblInfo;
         private System.Windows.Forms.Label lblExplained;
+        private System.Windows.Forms.Label lblAutoValue;
     }
 }
