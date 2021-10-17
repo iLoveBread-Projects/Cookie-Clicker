@@ -38,6 +38,8 @@ namespace ClickerGame
             // Set the size of the form programmatically.
             this.Width = 230;
             this.Height = 315;
+
+            lblExplained.Text = "";
         }
 
         private void btnBuy_Click(object sender, EventArgs e)
@@ -53,8 +55,6 @@ namespace ClickerGame
                         _saveData.BoughtItems.Add(item.Name, 0);
                     else
                         _saveData.BoughtItems[item.Name]++;
-
-
 
                     this.Close();
                 }

@@ -31,11 +31,28 @@ namespace ClickerGame
             _saveData.ShopData.Items = new()
             {
                 new Item() { Name = "Google Click Bot", CookiesPerSecond = 1, Price = 50, Description = "When buying this bot you will get:\n1 click per second automatically." },
-                new Item() { Name = "Juice Creator Bot", CookiesPerSecond = 2, Price = 100, Description = "When buying this bot you will get:\n2 clicks per second automatically." },
-                new Item() { Name = "Stepsis", CookiesPerSecond = 5, Price = 250, Description = "When buying her you will get:\n5 clicks per second automatically" },
-                new Item() { Name = "Cow Milker", CookiesPerSecond = 10, Price = 500, Description = "When buying this milker you will get:\n10 clicks per second automatically" },
-                new Item() { Name = "Russian Dancer", CookiesPerSecond = 20, Price = 1000, Description = "When buying this dancer you will get:\n20 clicks per second automatically" }
+                new Item() { Name = "Juice Creator", CookiesPerSecond = 2, Price = 100, Description = "When buying this bot you will get:\n2 clicks per second automatically." },
+                new Item() { Name = "Stepsis", CookiesPerSecond = 5, Price = 250, Description = "When buying her you will get:\n5 clicks per second automatically." },
+                new Item() { Name = "Cow Milker", CookiesPerSecond = 10, Price = 500, Description = "When buying this milker you will get:\n10 clicks per second automatically." },
+                new Item() { Name = "Russian Dancer", CookiesPerSecond = 20, Price = 1000, Description = "When buying this dancer you will get:\n20 clicks per second automatically." },
+                new Item() { Name = "Cookie Extractor", CookiesPerSecond = 25, Price = 1500, Description = "When buying this extractor you will get:\n25 clicks per second automatically." },
+                new Item() { Name = "Milky Miner", CookiesPerSecond = 35, Price = 2500, Description = "When buying this miner you will get:\n35 clicks per second automatically." },
+                new Item() { Name = "Invalid Cookie Discarder", CookiesPerSecond = 50, Price = 5000, Description = "When buying this discarder you will get:\n50 clicks per second automatically." }
             };
+
+            tmrAutoClick.Enabled = true;
+            tmrAutoClick.Interval = 1000;
+            tmrAutoClick.Tick += new EventHandler(OnTimerTick);
+
+            UpdateUI();
+        }
+
+        private void OnTimerTick(object sender, EventArgs e)
+        {
+            foreach (var item in _saveData.BoughtItems)
+            {
+                _saveData.CookieCount += (item.Value + 1) * _saveData.ShopData.Items.First(x => x.Name == item.Key).CookiesPerSecond;
+            }
 
             UpdateUI();
         }
@@ -70,7 +87,9 @@ namespace ClickerGame
         {
             // Give the right values to each string and item needed.
             lblClickCounter.Text = _saveData.CookieCount + "";
-            lblNeededToUpgrade.Text = Convert.ToString(_saveData.ShopData.Items.Min(x => x.Price) - _saveData.CookieCount);
+
+            lbxOwnedItems.Items.Clear();
+
             if ((_saveData.ShopData.PointsNeeded - _saveData.CookieCount) <= 0)
             {
                 lblNeededToUpgrade.Text = "none";
@@ -80,9 +99,8 @@ namespace ClickerGame
                 lblNeededToUpgrade.Text = Convert.ToString(_saveData.ShopData.PointsNeeded - _saveData.CookieCount);
             }
 
-            lbxOwnedItems.Items.Clear();
             foreach (var item in _saveData.BoughtItems)
-                lbxOwnedItems.Items.Add($"{item.Value}x {item.Key}");
+                lbxOwnedItems.Items.Add($"{item.Value + 1}x {item.Key}");
         }
     }
 }

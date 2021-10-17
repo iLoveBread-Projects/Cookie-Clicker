@@ -36,10 +36,12 @@ namespace ClickerGame
             this.lblClickCounter = new System.Windows.Forms.Label();
             this.btnShop = new System.Windows.Forms.Button();
             this.lbxOwnedItems = new System.Windows.Forms.ListBox();
-            this.lblNeededToUpgrade = new System.Windows.Forms.Label();
             this.lblOwned = new System.Windows.Forms.Label();
-            this.lblInfoNeeded = new System.Windows.Forms.Label();
             this.tmrAutoClick = new System.Windows.Forms.Timer(this.components);
+            this.lblNeededToUpgrade = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblACPS = new System.Windows.Forms.Label();
+            this.lblInfo = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnClicker
@@ -72,9 +74,9 @@ namespace ClickerGame
             // 
             // btnShop
             // 
-            this.btnShop.Location = new System.Drawing.Point(273, 148);
+            this.btnShop.Location = new System.Drawing.Point(258, 148);
             this.btnShop.Name = "btnShop";
-            this.btnShop.Size = new System.Drawing.Size(94, 23);
+            this.btnShop.Size = new System.Drawing.Size(109, 23);
             this.btnShop.TabIndex = 16;
             this.btnShop.Text = "Open Shop";
             this.btnShop.UseVisualStyleBackColor = true;
@@ -84,56 +86,77 @@ namespace ClickerGame
             // 
             this.lbxOwnedItems.Enabled = false;
             this.lbxOwnedItems.FormattingEnabled = true;
-            this.lbxOwnedItems.Location = new System.Drawing.Point(273, 25);
+            this.lbxOwnedItems.Location = new System.Drawing.Point(258, 25);
             this.lbxOwnedItems.Name = "lbxOwnedItems";
-            this.lbxOwnedItems.Size = new System.Drawing.Size(94, 121);
+            this.lbxOwnedItems.Size = new System.Drawing.Size(109, 121);
             this.lbxOwnedItems.TabIndex = 17;
-            // 
-            // lblNeededToUpgrade
-            // 
-            this.lblNeededToUpgrade.AutoSize = true;
-            this.lblNeededToUpgrade.Location = new System.Drawing.Point(173, 161);
-            this.lblNeededToUpgrade.Name = "lblNeededToUpgrade";
-            this.lblNeededToUpgrade.Size = new System.Drawing.Size(105, 13);
-            this.lblNeededToUpgrade.TabIndex = 18;
-            this.lblNeededToUpgrade.Text = "*neededToUpgrade*";
             // 
             // lblOwned
             // 
             this.lblOwned.AutoSize = true;
-            this.lblOwned.Location = new System.Drawing.Point(286, 9);
+            this.lblOwned.Location = new System.Drawing.Point(278, 9);
             this.lblOwned.Name = "lblOwned";
             this.lblOwned.Size = new System.Drawing.Size(69, 13);
             this.lblOwned.TabIndex = 19;
             this.lblOwned.Text = "Owned Items";
             // 
-            // lblInfoNeeded
-            // 
-            this.lblInfoNeeded.AutoSize = true;
-            this.lblInfoNeeded.Location = new System.Drawing.Point(9, 161);
-            this.lblInfoNeeded.Name = "lblInfoNeeded";
-            this.lblInfoNeeded.Size = new System.Drawing.Size(158, 13);
-            this.lblInfoNeeded.TabIndex = 20;
-            this.lblInfoNeeded.Text = "Points needed for next upgrade:";
-            // 
             // tmrAutoClick
             // 
             this.tmrAutoClick.Interval = 1000;
+            // 
+            // lblNeededToUpgrade
+            // 
+            this.lblNeededToUpgrade.AutoSize = true;
+            this.lblNeededToUpgrade.Location = new System.Drawing.Point(136, 158);
+            this.lblNeededToUpgrade.Name = "lblNeededToUpgrade";
+            this.lblNeededToUpgrade.Size = new System.Drawing.Size(107, 13);
+            this.lblNeededToUpgrade.TabIndex = 20;
+            this.lblNeededToUpgrade.Text = "*NeededToUpgrade*";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 158);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(121, 13);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Next cheapest upgrade:";
+            // 
+            // lblACPS
+            // 
+            this.lblACPS.AutoSize = true;
+            this.lblACPS.Location = new System.Drawing.Point(136, 145);
+            this.lblACPS.Name = "lblACPS";
+            this.lblACPS.Size = new System.Drawing.Size(75, 13);
+            this.lblACPS.TabIndex = 22;
+            this.lblACPS.Text = "*AutoClicks/s*";
+            // 
+            // lblInfo
+            // 
+            this.lblInfo.AutoSize = true;
+            this.lblInfo.Location = new System.Drawing.Point(12, 145);
+            this.lblInfo.Name = "lblInfo";
+            this.lblInfo.Size = new System.Drawing.Size(118, 13);
+            this.lblInfo.TabIndex = 23;
+            this.lblInfo.Text = "Auto clicks per second:";
             // 
             // frmClicker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(379, 183);
-            this.Controls.Add(this.lblInfoNeeded);
-            this.Controls.Add(this.lblOwned);
+            this.Controls.Add(this.lblInfo);
+            this.Controls.Add(this.lblACPS);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblNeededToUpgrade);
+            this.Controls.Add(this.lblOwned);
             this.Controls.Add(this.lbxOwnedItems);
             this.Controls.Add(this.btnShop);
             this.Controls.Add(this.lblClickCounter);
             this.Controls.Add(this.lblPoints);
             this.Controls.Add(this.btnClicker);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmClicker";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cookie Clicker";
@@ -151,10 +174,12 @@ namespace ClickerGame
         private System.Windows.Forms.Label lblClickCounter;
         private System.Windows.Forms.Button btnShop;
         private System.Windows.Forms.ListBox lbxOwnedItems;
-        private System.Windows.Forms.Label lblNeededToUpgrade;
         private System.Windows.Forms.Label lblOwned;
-        private System.Windows.Forms.Label lblInfoNeeded;
         private System.Windows.Forms.Timer tmrAutoClick;
+        private System.Windows.Forms.Label lblNeededToUpgrade;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblACPS;
+        private System.Windows.Forms.Label lblInfo;
     }
 }
 
