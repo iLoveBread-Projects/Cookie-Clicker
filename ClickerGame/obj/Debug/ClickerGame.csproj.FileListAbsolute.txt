@@ -1,0 +1,10 @@
+F:\c#\ClickerGame\ClickerGame\bin\Debug\ClickerGame.exe.config
+F:\c#\ClickerGame\ClickerGame\bin\Debug\ClickerGame.exe
+F:\c#\ClickerGame\ClickerGame\bin\Debug\ClickerGame.pdb
+F:\c#\ClickerGame\ClickerGame\obj\Debug\ClickerGame.Properties.Resources.resources
+F:\c#\ClickerGame\ClickerGame\obj\Debug\ClickerGame.csproj.GenerateResource.cache
+F:\c#\ClickerGame\ClickerGame\obj\Debug\ClickerGame.csproj.CoreCompileInputs.cache
+F:\c#\ClickerGame\ClickerGame\obj\Debug\ClickerGame.exe
+F:\c#\ClickerGame\ClickerGame\obj\Debug\ClickerGame.pdb
+F:\c#\ClickerGame\ClickerGame\obj\Debug\ClickerGame.frmShop.resources
+F:\c#\ClickerGame\ClickerGame\obj\Debug\ClickerGame.frmClicker.resources
