@@ -37,7 +37,8 @@ namespace ClickerGame
                 new Item() { Name = "Russian Dancer", CookiesPerSecond = 20, Price = 1000, Description = "When buying this dancer you will get:\n20 clicks per second automatically." },
                 new Item() { Name = "Cookie Extractor", CookiesPerSecond = 25, Price = 1500, Description = "When buying this extractor you will get:\n25 clicks per second automatically." },
                 new Item() { Name = "Milky Miner", CookiesPerSecond = 35, Price = 2500, Description = "When buying this miner you will get:\n35 clicks per second automatically." },
-                new Item() { Name = "Invalid Cookie Discarder", CookiesPerSecond = 50, Price = 5000, Description = "When buying this discarder you will get:\n50 clicks per second automatically." }
+                new Item() { Name = "Invalid Cookie Discarder", CookiesPerSecond = 50, Price = 5000, Description = "When buying this discarder you will get:\n50 clicks per second automatically." },
+                new Item() { Name = "Price Checker", CookiesPerSecond = 75, Price = 10000, Description = "When buying this checker you will get:\n75 clicks per second automatically." }
             };
 
             tmrAutoClick.Enabled = true;
