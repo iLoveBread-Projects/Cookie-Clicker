@@ -47,13 +47,12 @@ namespace ClickerGame
         private void btnBuy_Click(object sender, EventArgs e)
         {
             var item = _saveData.ShopData.Items.First(x => x.Name == selectedItem);
-            var currentPrice = GetPrice(item, _saveData.BoughtItems.FirstOrDefault(x => x.Key == selectedItem, new KeyValuePair<string, int>(item.Name, 0)).Value);
 
-            if (_saveData.CookieCount >= currentPrice)
+            if (_saveData.CookieCount >= item.Price)
             {
                 try
                 {
-                    _saveData.CookieCount -= currentPrice;
+                    _saveData.CookieCount -= item.Price;
                     if (!_saveData.BoughtItems.ContainsKey(item.Name))
                         _saveData.BoughtItems.Add(item.Name, 0);
                     else
