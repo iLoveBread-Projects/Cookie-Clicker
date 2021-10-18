@@ -50,8 +50,10 @@ namespace ClickerGame
 
         private void OnTimerTick(object sender, EventArgs e)
         {
+            // Each second (interval of the timer), this will run.
             foreach (var item in _saveData.BoughtItems)
             {
+                // For each item that you bought it will add clicks automatically each second.
                 _saveData.CookieCount += (item.Value + 1) * _saveData.ShopData.Items.First(x => x.Name == item.Key).CookiesPerSecond;
             }
 
@@ -60,6 +62,7 @@ namespace ClickerGame
 
         private void btnClicker_Click(object sender, EventArgs e)
         {
+            // Add clicks each time you click the button.
             _saveData.CookieCount += _saveData.PointsPerClick;
 
             UpdateUI();
@@ -69,6 +72,7 @@ namespace ClickerGame
         {
             try
             {
+                // Open the shop form.
                 frmShop f2 = new frmShop(ref _saveData);
                 f2.ShowDialog();
                 UpdateUI();
