@@ -1,6 +1,6 @@
 {
   "PointsPerClick": 1,
-  "CookieCount": 106390,
+  "CookieCount": 0,
   "ClickerCount": 0,
   "ShopData": {
     "PointsNeeded": 50,
@@ -38,30 +38,28 @@
       {
         "Name": "Cookie Extractor",
         "CookiesPerSecond": 25,
-        "Price": 1500,
+        "Price": 2500,
         "Description": "When buying this extractor you will get:\n25 clicks per second automatically."
       },
       {
         "Name": "Milky Miner",
         "CookiesPerSecond": 35,
-        "Price": 2500,
+        "Price": 3500,
         "Description": "When buying this miner you will get:\n35 clicks per second automatically."
       },
       {
         "Name": "Invalid Cookie Discarder",
         "CookiesPerSecond": 50,
-        "Price": 5000,
+        "Price": 7500,
         "Description": "When buying this discarder you will get:\n50 clicks per second automatically."
+      },
+      {
+        "Name": "Price Checker",
+        "CookiesPerSecond": 75,
+        "Price": 15000,
+        "Description": "When buying this checker you will get:\n75 clicks per second automatically."
       }
     ]
   },
-  "BoughtItems": {
-    "Google Click Bot": 2,
-    "Juice Creator": 0,
-    "Stepsis": 1,
-    "Russian Dancer": 1,
-    "Cookie Extractor": 0,
-    "Milky Miner": 3,
-    "Invalid Cookie Discarder": 6
-  }
+  "BoughtItems": {}
 }
