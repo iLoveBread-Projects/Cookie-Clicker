@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Threading;
 using Newtonsoft.Json;
+using System.Diagnostics;
 
 namespace ClickerGame
 {
@@ -41,6 +42,7 @@ namespace ClickerGame
                 new Item() { Name = "Price Checker", CookiesPerSecond = 75, Price = 15000, Description = "When buying this checker you will get:\n75 clicks per second automatically." },
                 new Item() { Name = "Dad's Juice", CookiesPerSecond = 100, Price = 20000, Description = "When buying this juice you will get:\n100 clicks per second automatically." },
                 new Item() { Name = "Cookie Generator", CookiesPerSecond = 150, Price = 30000, Description = "When buying this generator you will get:\n150 clicks per second automatically." },
+                new Item() { Name = "Your Mom", CookiesPerSecond = 175, Price = 35000, Description = "When buying your mom you will get:\n175 clicks per second automatically." }
             };
             
             // Create a timer that ticks every second.
@@ -83,6 +85,7 @@ namespace ClickerGame
             catch (Exception)
             {
                 MessageBox.Show($"There was a problem opening the item shop. Please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (Debugger.IsAttached) throw;
             }
         }
 
@@ -116,13 +119,14 @@ namespace ClickerGame
         {
             try
             {
-                frmClickUpgrade f3 = new frmClickUpgrade();
-                f3.ShowDialog();
+
+
                 UpdateUI();
             }
             catch (Exception)
             {
-                MessageBox.Show($"There was a problem opening the click upgrades form. Please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"There was a problem while upgrading the points per click you get. Please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (Debugger.IsAttached) throw;
             }
         }
     }

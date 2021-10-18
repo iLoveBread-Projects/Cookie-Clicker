@@ -61,7 +61,8 @@ namespace ClickerGame
             "Invalid Cookie Discarder",
             "Price Checker",
             "Dad\'s Juice",
-            "Cookie Generator"});
+            "Cookie Generator",
+            "Your Mom"});
             this.lbxItems.Location = new System.Drawing.Point(13, 16);
             this.lbxItems.Name = "lbxItems";
             this.lbxItems.Size = new System.Drawing.Size(184, 147);

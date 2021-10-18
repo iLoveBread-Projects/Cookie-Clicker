@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace ClickerGame
 {
@@ -46,7 +47,7 @@ namespace ClickerGame
         private void btnBuy_Click(object sender, EventArgs e)
         {
             var item = _saveData.ShopData.Items.First(x => x.Name == selectedItem);
-            var currentPrice = GetPrice(item, _saveData.BoughtItems.First(x => x.Key == selectedItem).Value);
+            var currentPrice = GetPrice(item, _saveData.BoughtItems.FirstOrDefault(x => x.Key == selectedItem, new KeyValuePair<string, int>(item.Name, 0)).Value);
 
             if (_saveData.CookieCount >= currentPrice)
             {
@@ -63,6 +64,7 @@ namespace ClickerGame
                 catch (Exception)
                 {
                     MessageBox.Show($"There went something wrong, please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if (Debugger.IsAttached) throw;
                 }
             }
             else

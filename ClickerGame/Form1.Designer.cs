@@ -122,11 +122,11 @@ namespace ClickerGame
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(156, 148);
+            this.button1.Location = new System.Drawing.Point(156, 25);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(96, 23);
+            this.button1.Size = new System.Drawing.Size(96, 40);
             this.button1.TabIndex = 22;
-            this.button1.Text = "Upgrade Clicks";
+            this.button1.Text = "Upgrade Click Earnings";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
