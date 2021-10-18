@@ -40,8 +40,7 @@ namespace ClickerGame
             this.tmrAutoClick = new System.Windows.Forms.Timer(this.components);
             this.lblNeededToUpgrade = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblACPS = new System.Windows.Forms.Label();
-            this.lblInfo = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnClicker
@@ -84,7 +83,6 @@ namespace ClickerGame
             // 
             // lbxOwnedItems
             // 
-            this.lbxOwnedItems.Enabled = false;
             this.lbxOwnedItems.FormattingEnabled = true;
             this.lbxOwnedItems.Location = new System.Drawing.Point(258, 25);
             this.lbxOwnedItems.Name = "lbxOwnedItems";
@@ -107,7 +105,7 @@ namespace ClickerGame
             // lblNeededToUpgrade
             // 
             this.lblNeededToUpgrade.AutoSize = true;
-            this.lblNeededToUpgrade.Location = new System.Drawing.Point(136, 158);
+            this.lblNeededToUpgrade.Location = new System.Drawing.Point(12, 153);
             this.lblNeededToUpgrade.Name = "lblNeededToUpgrade";
             this.lblNeededToUpgrade.Size = new System.Drawing.Size(107, 13);
             this.lblNeededToUpgrade.TabIndex = 20;
@@ -116,37 +114,28 @@ namespace ClickerGame
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 158);
+            this.label1.Location = new System.Drawing.Point(12, 135);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(121, 13);
             this.label1.TabIndex = 21;
             this.label1.Text = "Next cheapest upgrade:";
             // 
-            // lblACPS
+            // button1
             // 
-            this.lblACPS.AutoSize = true;
-            this.lblACPS.Location = new System.Drawing.Point(136, 145);
-            this.lblACPS.Name = "lblACPS";
-            this.lblACPS.Size = new System.Drawing.Size(75, 13);
-            this.lblACPS.TabIndex = 22;
-            this.lblACPS.Text = "*AutoClicks/s*";
-            // 
-            // lblInfo
-            // 
-            this.lblInfo.AutoSize = true;
-            this.lblInfo.Location = new System.Drawing.Point(12, 145);
-            this.lblInfo.Name = "lblInfo";
-            this.lblInfo.Size = new System.Drawing.Size(118, 13);
-            this.lblInfo.TabIndex = 23;
-            this.lblInfo.Text = "Auto clicks per second:";
+            this.button1.Location = new System.Drawing.Point(156, 148);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(96, 23);
+            this.button1.TabIndex = 22;
+            this.button1.Text = "Upgrade Clicks";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmClicker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(379, 183);
-            this.Controls.Add(this.lblInfo);
-            this.Controls.Add(this.lblACPS);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblNeededToUpgrade);
             this.Controls.Add(this.lblOwned);
@@ -178,8 +167,7 @@ namespace ClickerGame
         private System.Windows.Forms.Timer tmrAutoClick;
         private System.Windows.Forms.Label lblNeededToUpgrade;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblACPS;
-        private System.Windows.Forms.Label lblInfo;
+        private System.Windows.Forms.Button button1;
     }
 }
 

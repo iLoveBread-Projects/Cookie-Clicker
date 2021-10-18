@@ -1,6 +1,6 @@
 {
   "PointsPerClick": 1,
-  "CookieCount": 0,
+  "CookieCount": 333,
   "ClickerCount": 0,
   "ShopData": {
     "PointsNeeded": 50,
@@ -58,6 +58,18 @@
         "CookiesPerSecond": 75,
         "Price": 15000,
         "Description": "When buying this checker you will get:\n75 clicks per second automatically."
+      },
+      {
+        "Name": "Dad's Juice",
+        "CookiesPerSecond": 100,
+        "Price": 20000,
+        "Description": "When buying this juice you will get:\n100 clicks per second automatically."
+      },
+      {
+        "Name": "Cookie Generator",
+        "CookiesPerSecond": 150,
+        "Price": 30000,
+        "Description": "When buying this generator you will get:\n150 clicks per second automatically."
       }
     ]
   },

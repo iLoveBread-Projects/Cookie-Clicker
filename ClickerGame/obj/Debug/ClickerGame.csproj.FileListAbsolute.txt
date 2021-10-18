@@ -11,13 +11,13 @@ F:\c#\ClickerGame\ClickerGame\obj\Debug\ClickerGame.frmClicker.resources
 C:\Users\Administrator\Desktop\GitHub projects\Cookie-Clicker\ClickerGame\bin\Debug\ClickerGame.exe.config
 C:\Users\Administrator\Desktop\GitHub projects\Cookie-Clicker\ClickerGame\bin\Debug\ClickerGame.exe
 C:\Users\Administrator\Desktop\GitHub projects\Cookie-Clicker\ClickerGame\bin\Debug\ClickerGame.pdb
+C:\Users\Administrator\Desktop\GitHub projects\Cookie-Clicker\ClickerGame\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Administrator\Desktop\GitHub projects\Cookie-Clicker\ClickerGame\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Administrator\Desktop\GitHub projects\Cookie-Clicker\ClickerGame\obj\Debug\ClickerGame.frmClicker.resources
 C:\Users\Administrator\Desktop\GitHub projects\Cookie-Clicker\ClickerGame\obj\Debug\ClickerGame.frmShop.resources
+C:\Users\Administrator\Desktop\GitHub projects\Cookie-Clicker\ClickerGame\obj\Debug\ClickerGame.frmClickUpgrade.resources
 C:\Users\Administrator\Desktop\GitHub projects\Cookie-Clicker\ClickerGame\obj\Debug\ClickerGame.Properties.Resources.resources
 C:\Users\Administrator\Desktop\GitHub projects\Cookie-Clicker\ClickerGame\obj\Debug\ClickerGame.csproj.GenerateResource.cache
 C:\Users\Administrator\Desktop\GitHub projects\Cookie-Clicker\ClickerGame\obj\Debug\ClickerGame.csproj.CoreCompileInputs.cache
 C:\Users\Administrator\Desktop\GitHub projects\Cookie-Clicker\ClickerGame\obj\Debug\ClickerGame.exe
 C:\Users\Administrator\Desktop\GitHub projects\Cookie-Clicker\ClickerGame\obj\Debug\ClickerGame.pdb
-C:\Users\Administrator\Desktop\GitHub projects\Cookie-Clicker\ClickerGame\bin\Debug\Newtonsoft.Json.dll
-C:\Users\Administrator\Desktop\GitHub projects\Cookie-Clicker\ClickerGame\bin\Debug\Newtonsoft.Json.xml
-C:\Users\Administrator\Desktop\GitHub projects\Cookie-Clicker\ClickerGame\obj\Debug\ClickerGame.csproj.CopyComplete

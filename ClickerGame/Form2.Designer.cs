@@ -60,7 +60,8 @@ namespace ClickerGame
             "Milky Miner",
             "Invalid Cookie Discarder",
             "Price Checker",
-            "Dad\'s Juice"});
+            "Dad\'s Juice",
+            "Cookie Generator"});
             this.lbxItems.Location = new System.Drawing.Point(13, 16);
             this.lbxItems.Name = "lbxItems";
             this.lbxItems.Size = new System.Drawing.Size(184, 147);
@@ -97,7 +98,7 @@ namespace ClickerGame
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmShop";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Shop";
             this.Load += new System.EventHandler(this.frmShop_Load);
             this.ResumeLayout(false);

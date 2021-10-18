@@ -46,26 +46,13 @@ namespace ClickerGame
         private void btnBuy_Click(object sender, EventArgs e)
         {
             var item = _saveData.ShopData.Items.First(x => x.Name == selectedItem);
+            var currentPrice = GetPrice(item, _saveData.BoughtItems.First(x => x.Key == selectedItem).Value);
 
-            foreach (var boughtItem in _saveData.BoughtItems)
-            {
-                if (boughtItem.Value <= 0)
-                {
-                    currentPrice = item.Price;
-                }
-                else
-                {
-                    currentPrice = item.Price * (boughtItem.Value + 2);
-                }
-            }
-            
             if (_saveData.CookieCount >= currentPrice)
             {
                 try
                 {
                     _saveData.CookieCount -= currentPrice;
-                    Console.WriteLine(currentPrice);
-                    Console.WriteLine(item.Price);
                     if (!_saveData.BoughtItems.ContainsKey(item.Name))
                         _saveData.BoughtItems.Add(item.Name, 0);
                     else
@@ -80,7 +67,7 @@ namespace ClickerGame
             }
             else
             {
-                MessageBox.Show($"Not enought points, you need {currentPrice} points for this item.", "Stop", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                MessageBox.Show($"Not enought points, you need {GetPrice(item, item.Price)} points for this item.", "Stop", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
         }
 
@@ -88,6 +75,11 @@ namespace ClickerGame
         {
             selectedItem = lbxItems.SelectedItem.ToString();
             lblExplained.Text = _saveData.ShopData.Items.First(x => x.Name == selectedItem).Description;
+        }
+
+        private int GetPrice(Item item, int currentAmount)
+        {
+            return item.Price * (currentAmount + 2);
         }
     }
 }

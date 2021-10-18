@@ -39,7 +39,8 @@ namespace ClickerGame
                 new Item() { Name = "Milky Miner", CookiesPerSecond = 35, Price = 3500, Description = "When buying this miner you will get:\n35 clicks per second automatically." },
                 new Item() { Name = "Invalid Cookie Discarder", CookiesPerSecond = 50, Price = 7500, Description = "When buying this discarder you will get:\n50 clicks per second automatically." },
                 new Item() { Name = "Price Checker", CookiesPerSecond = 75, Price = 15000, Description = "When buying this checker you will get:\n75 clicks per second automatically." },
-                new Item() { Name = "Dad's Juice", CookiesPerSecond = 100, Price = 20000, Description = "When buying this juice you will get:\n100 clicks per second automatically." }
+                new Item() { Name = "Dad's Juice", CookiesPerSecond = 100, Price = 20000, Description = "When buying this juice you will get:\n100 clicks per second automatically." },
+                new Item() { Name = "Cookie Generator", CookiesPerSecond = 150, Price = 30000, Description = "When buying this generator you will get:\n150 clicks per second automatically." },
             };
             
             // Create a timer that ticks every second.
@@ -109,6 +110,20 @@ namespace ClickerGame
 
             foreach (var item in _saveData.BoughtItems)
                 lbxOwnedItems.Items.Add($"{item.Value + 1}x {item.Key}");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmClickUpgrade f3 = new frmClickUpgrade();
+                f3.ShowDialog();
+                UpdateUI();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show($"There was a problem opening the click upgrades form. Please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
