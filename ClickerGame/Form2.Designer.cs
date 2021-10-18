@@ -1,4 +1,4 @@
-﻿
+
 namespace ClickerGame
 {
     partial class frmShop
@@ -58,7 +58,8 @@ namespace ClickerGame
             "Russian Dancer",
             "Cookie Extractor",
             "Milky Miner",
-            "Invalid Cookie Discarder"});
+            "Invalid Cookie Discarder",
+            "Price Checker"});
             this.lbxItems.Location = new System.Drawing.Point(13, 16);
             this.lbxItems.Name = "lbxItems";
             this.lbxItems.Size = new System.Drawing.Size(184, 147);
