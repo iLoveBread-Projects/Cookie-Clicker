@@ -40,7 +40,8 @@ namespace ClickerGame
                 new Item() { Name = "Invalid Cookie Discarder", CookiesPerSecond = 50, Price = 5000, Description = "When buying this discarder you will get:\n50 clicks per second automatically." },
                 new Item() { Name = "Price Checker", CookiesPerSecond = 75, Price = 10000, Description = "When buying this checker you will get:\n75 clicks per second automatically." }
             };
-
+            
+            // Create a timer that ticks every second.
             tmrAutoClick.Enabled = true;
             tmrAutoClick.Interval = 1000;
             tmrAutoClick.Tick += new EventHandler(OnTimerTick);
@@ -85,12 +86,13 @@ namespace ClickerGame
 
         private void frmClicker_FormClosing(object sender, FormClosingEventArgs e)
         {
+            // Save the game progress upon closing the main form.
             File.WriteAllText("save.json", JsonConvert.SerializeObject(_saveData, Formatting.Indented));
         }
 
         private void UpdateUI()
         {
-            // Give the right values to each string and item needed.
+            // Give the right values to each string and item needed every time time the event is triggered.
             lblClickCounter.Text = _saveData.CookieCount + "";
 
             lbxOwnedItems.Items.Clear();
