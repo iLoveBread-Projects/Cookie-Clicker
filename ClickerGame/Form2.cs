@@ -45,6 +45,7 @@ namespace ClickerGame
         private void btnBuy_Click(object sender, EventArgs e)
         {
             var item = _saveData.ShopData.Items.First(x => x.Name == selectedItem);
+            
             if (_saveData.CookieCount >= item.Price)
             {
                 try
