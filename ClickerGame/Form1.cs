@@ -111,6 +111,7 @@ namespace ClickerGame
                 lbxOwnedItems.Items.Add($"{item.Value + 1}x {item.Key}");
 
             lblPrestigeLevel.Text = $"Prestige: {_saveData.PrestigeLevel}";
+            lblNeededForPrestige.Text = $"{_saveData.NeededForPrestige *= (PrestigeLevel + 1)} points";
         }
 
         private void NewPrestige()
@@ -129,8 +130,9 @@ namespace ClickerGame
 
                     foreach (var boughtItem in _saveData.BoughtItems)
                     {
-                        lbxOwnedItems.Items.Remove(boughtItem);
-                        _saveData.BoughtItems.Remove(boughtItem.Key);
+                        _saveData.BoughtItems.Clear();
+                        lbxOwnedItems.Items.Clear();
+                        UpdateUI();
                     }
 
                     _saveData.PointsPerClick *= 2;
@@ -157,8 +159,11 @@ namespace ClickerGame
                 if (result == DialogResult.Yes)
                 {
                     NewPrestige();
-                    _saveData.CookieCount -= _saveData.NeededForPrestige;
+                    _saveData.CookieCount -= _saveData.CookieCount;
                     _saveData.PrestigeLevel++;
+                    _saveData.NeededForPrestige *= _saveData.PrestigeLevel;
+
+                    UpdateUI();
                 }
                 else if (result == DialogResult.No)
                 {
