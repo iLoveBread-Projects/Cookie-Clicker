@@ -21,4 +21,3 @@ C:\Users\Administrator\Desktop\GitHub projects\Cookie-Clicker\ClickerGame\obj\De
 C:\Users\Administrator\Desktop\GitHub projects\Cookie-Clicker\ClickerGame\obj\Debug\ClickerGame.exe
 C:\Users\Administrator\Desktop\GitHub projects\Cookie-Clicker\ClickerGame\obj\Debug\ClickerGame.pdb
 C:\Users\Administrator\Desktop\GitHub projects\Cookie-Clicker\ClickerGame\obj\Debug\ClickerGame.csproj.CopyComplete
-C:\Users\Administrator\Desktop\GitHub projects\Cookie-Clicker\ClickerGame\obj\Debug\ClickerGame.csproj.AssemblyReference.cache

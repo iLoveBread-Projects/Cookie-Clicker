@@ -103,7 +103,7 @@ namespace ClickerGame
         private void UpdateUI()
         {
             // Give the right values to each string and item needed every time time the event is triggered.
-            lblClickCounter.Text = _saveData.CookieCount + "";
+            lblClickCounter.Text = Convert.ToString(_saveData.CookieCount);
 
             lbxOwnedItems.Items.Clear();
 
