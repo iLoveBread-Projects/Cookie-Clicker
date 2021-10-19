@@ -34,11 +34,12 @@ namespace ClickerGame
             this.lbxItems = new System.Windows.Forms.ListBox();
             this.lblInfo = new System.Windows.Forms.Label();
             this.lblExplained = new System.Windows.Forms.Label();
+            this.lblPriceExplained = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnBuy
             // 
-            this.btnBuy.Location = new System.Drawing.Point(13, 236);
+            this.btnBuy.Location = new System.Drawing.Point(12, 269);
             this.btnBuy.Name = "btnBuy";
             this.btnBuy.Size = new System.Drawing.Size(184, 23);
             this.btnBuy.TabIndex = 0;
@@ -62,8 +63,9 @@ namespace ClickerGame
             "Price Checker",
             "Dad\'s Juice",
             "Cookie Generator",
-            "Your Mom"});
-            this.lbxItems.Location = new System.Drawing.Point(13, 16);
+            "Your Mom",
+            "Cookie Friender"});
+            this.lbxItems.Location = new System.Drawing.Point(15, 55);
             this.lbxItems.Name = "lbxItems";
             this.lbxItems.Size = new System.Drawing.Size(184, 147);
             this.lbxItems.TabIndex = 4;
@@ -72,7 +74,7 @@ namespace ClickerGame
             // lblInfo
             // 
             this.lblInfo.AutoSize = true;
-            this.lblInfo.Location = new System.Drawing.Point(12, 166);
+            this.lblInfo.Location = new System.Drawing.Point(12, 205);
             this.lblInfo.Name = "lblInfo";
             this.lblInfo.Size = new System.Drawing.Size(88, 13);
             this.lblInfo.TabIndex = 5;
@@ -81,17 +83,27 @@ namespace ClickerGame
             // lblExplained
             // 
             this.lblExplained.AutoSize = true;
-            this.lblExplained.Location = new System.Drawing.Point(12, 188);
+            this.lblExplained.Location = new System.Drawing.Point(12, 228);
             this.lblExplained.Name = "lblExplained";
             this.lblExplained.Size = new System.Drawing.Size(61, 13);
             this.lblExplained.TabIndex = 6;
             this.lblExplained.Text = "*Explained*";
             // 
+            // lblPriceExplained
+            // 
+            this.lblPriceExplained.AutoSize = true;
+            this.lblPriceExplained.Location = new System.Drawing.Point(12, 9);
+            this.lblPriceExplained.Name = "lblPriceExplained";
+            this.lblPriceExplained.Size = new System.Drawing.Size(105, 13);
+            this.lblPriceExplained.TabIndex = 7;
+            this.lblPriceExplained.Text = "*ItemPriceExplained*";
+            // 
             // frmShop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(210, 265);
+            this.ClientSize = new System.Drawing.Size(210, 302);
+            this.Controls.Add(this.lblPriceExplained);
             this.Controls.Add(this.lblExplained);
             this.Controls.Add(this.lblInfo);
             this.Controls.Add(this.lbxItems);
@@ -113,5 +125,6 @@ namespace ClickerGame
         private System.Windows.Forms.ListBox lbxItems;
         private System.Windows.Forms.Label lblInfo;
         private System.Windows.Forms.Label lblExplained;
+        private System.Windows.Forms.Label lblPriceExplained;
     }
 }

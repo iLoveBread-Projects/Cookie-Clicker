@@ -42,7 +42,8 @@ namespace ClickerGame
                 new Item() { Name = "Price Checker", CookiesPerSecond = 75, Price = 15000, Description = "When buying this checker you will get:\n75 clicks per second automatically." },
                 new Item() { Name = "Dad's Juice", CookiesPerSecond = 100, Price = 20000, Description = "When buying this juice you will get:\n100 clicks per second automatically." },
                 new Item() { Name = "Cookie Generator", CookiesPerSecond = 150, Price = 30000, Description = "When buying this generator you will get:\n150 clicks per second automatically." },
-                new Item() { Name = "Your Mom", CookiesPerSecond = 175, Price = 35000, Description = "When buying your mom you will get:\n175 clicks per second automatically." }
+                new Item() { Name = "Your Mom", CookiesPerSecond = 175, Price = 35000, Description = "When buying your mom you will get:\n175 clicks per second automatically." },
+                new Item() { Name = "Cookie Friender", CookiesPerSecond = 200, Price = 40000, Description = "When buying your mom you will get:\n200 clicks per second automatically." }
             };
             
             // Create a timer that ticks every second.
@@ -102,24 +103,26 @@ namespace ClickerGame
 
             lbxOwnedItems.Items.Clear();
 
-            if ((_saveData.ShopData.PointsNeeded - _saveData.CookieCount) <= 0)
-            {
-                lblNeededToUpgrade.Text = "none";
-            }
-            else
-            {
-                lblNeededToUpgrade.Text = Convert.ToString(_saveData.ShopData.PointsNeeded - _saveData.CookieCount);
-            }
-
             foreach (var item in _saveData.BoughtItems)
                 lbxOwnedItems.Items.Add($"{item.Value + 1}x {item.Key}");
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnClickUpgrade_Click(object sender, EventArgs e)
         {
             try
             {
+                if (_saveData.CookieCount >= 500)
+                {
+                    _saveData.CookieCount -= 500;
+                    _saveData.PointsPerClick += 1;
 
+                    UpdateUI();
+                    MessageBox.Show($"You now have {_saveData.PointsPerClick} points per click", "Success", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else
+                {
+                    MessageBox.Show($"You need {500 - _saveData.CookieCount} more points to afford this. Save a bit first", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
 
                 UpdateUI();
             }

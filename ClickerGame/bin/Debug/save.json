@@ -1,6 +1,6 @@
 {
   "PointsPerClick": 1,
-  "CookieCount": 449,
+  "CookieCount": 39,
   "ClickerCount": 0,
   "ShopData": {
     "PointsNeeded": 50,
@@ -76,8 +76,16 @@
         "CookiesPerSecond": 175,
         "Price": 35000,
         "Description": "When buying your mom you will get:\n175 clicks per second automatically."
+      },
+      {
+        "Name": "Cookie Friender",
+        "CookiesPerSecond": 200,
+        "Price": 40000,
+        "Description": "When buying your mom you will get:\n200 clicks per second automatically."
       }
     ]
   },
-  "BoughtItems": {}
+  "BoughtItems": {
+    "Google Click Bot": 0
+  }
 }
