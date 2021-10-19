@@ -64,7 +64,9 @@ namespace ClickerGame
             "Dad\'s Juice",
             "Cookie Generator",
             "Your Mom",
-            "Cookie Friender"});
+            "Cookie Friender",
+            "Stuff Creator",
+            "Empty Head"});
             this.lbxItems.Location = new System.Drawing.Point(15, 55);
             this.lbxItems.Name = "lbxItems";
             this.lbxItems.Size = new System.Drawing.Size(184, 147);

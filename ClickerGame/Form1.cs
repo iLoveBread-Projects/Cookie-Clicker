@@ -43,7 +43,9 @@ namespace ClickerGame
                 new Item() { Name = "Dad's Juice", CookiesPerSecond = 100, Price = 20000, Description = "When buying this juice you will get:\n100 clicks per second automatically." },
                 new Item() { Name = "Cookie Generator", CookiesPerSecond = 150, Price = 30000, Description = "When buying this generator you will get:\n150 clicks per second automatically." },
                 new Item() { Name = "Your Mom", CookiesPerSecond = 175, Price = 35000, Description = "When buying your mom you will get:\n175 clicks per second automatically." },
-                new Item() { Name = "Cookie Friender", CookiesPerSecond = 200, Price = 40000, Description = "When buying your mom you will get:\n200 clicks per second automatically." }
+                new Item() { Name = "Cookie Friender", CookiesPerSecond = 200, Price = 40000, Description = "When buying your mom you will get:\n200 clicks per second automatically." },
+                new Item() { Name = "Stuff Creator", CookiesPerSecond = 250, Price = 50000, Description = "When buying your mom you will get:\n250 clicks per second automatically." },
+                new Item() { Name = "Empty Head", CookiesPerSecond = 275, Price = 55000, Description = "When buying your mom you will get:\n275 clicks per second automatically." }
             };
             
             // Create a timer that ticks every second.

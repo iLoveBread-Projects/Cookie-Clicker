@@ -1,0 +1,104 @@
+{
+  "PointsPerClick": 1,
+  "CookieCount": 925,
+  "ClickerCount": 0,
+  "ShopData": {
+    "PointsNeeded": 50,
+    "Items": [
+      {
+        "Name": "Google Click Bot",
+        "CookiesPerSecond": 1,
+        "Price": 50,
+        "Description": "When buying this bot you will get:\n1 click per second automatically."
+      },
+      {
+        "Name": "Juice Creator",
+        "CookiesPerSecond": 2,
+        "Price": 100,
+        "Description": "When buying this bot you will get:\n2 clicks per second automatically."
+      },
+      {
+        "Name": "Stepsis",
+        "CookiesPerSecond": 5,
+        "Price": 250,
+        "Description": "When buying her you will get:\n5 clicks per second automatically."
+      },
+      {
+        "Name": "Cow Milker",
+        "CookiesPerSecond": 10,
+        "Price": 500,
+        "Description": "When buying this milker you will get:\n10 clicks per second automatically."
+      },
+      {
+        "Name": "Russian Dancer",
+        "CookiesPerSecond": 20,
+        "Price": 1000,
+        "Description": "When buying this dancer you will get:\n20 clicks per second automatically."
+      },
+      {
+        "Name": "Cookie Extractor",
+        "CookiesPerSecond": 25,
+        "Price": 2500,
+        "Description": "When buying this extractor you will get:\n25 clicks per second automatically."
+      },
+      {
+        "Name": "Milky Miner",
+        "CookiesPerSecond": 35,
+        "Price": 3500,
+        "Description": "When buying this miner you will get:\n35 clicks per second automatically."
+      },
+      {
+        "Name": "Invalid Cookie Discarder",
+        "CookiesPerSecond": 50,
+        "Price": 7500,
+        "Description": "When buying this discarder you will get:\n50 clicks per second automatically."
+      },
+      {
+        "Name": "Price Checker",
+        "CookiesPerSecond": 75,
+        "Price": 15000,
+        "Description": "When buying this checker you will get:\n75 clicks per second automatically."
+      },
+      {
+        "Name": "Dad's Juice",
+        "CookiesPerSecond": 100,
+        "Price": 20000,
+        "Description": "When buying this juice you will get:\n100 clicks per second automatically."
+      },
+      {
+        "Name": "Cookie Generator",
+        "CookiesPerSecond": 150,
+        "Price": 30000,
+        "Description": "When buying this generator you will get:\n150 clicks per second automatically."
+      },
+      {
+        "Name": "Your Mom",
+        "CookiesPerSecond": 175,
+        "Price": 35000,
+        "Description": "When buying your mom you will get:\n175 clicks per second automatically."
+      },
+      {
+        "Name": "Cookie Friender",
+        "CookiesPerSecond": 200,
+        "Price": 40000,
+        "Description": "When buying your mom you will get:\n200 clicks per second automatically."
+      },
+      {
+        "Name": "Stuff Creator",
+        "CookiesPerSecond": 250,
+        "Price": 50000,
+        "Description": "When buying your mom you will get:\n250 clicks per second automatically."
+      },
+      {
+        "Name": "Empty Head",
+        "CookiesPerSecond": 275,
+        "Price": 55000,
+        "Description": "When buying your mom you will get:\n275 clicks per second automatically."
+      }
+    ]
+  },
+  "BoughtItems": {
+    "Google Click Bot": 2,
+    "Juice Creator": 0
+  }
+}
