@@ -156,9 +156,9 @@ namespace ClickerGame
 
                 if (result == DialogResult.Yes)
                 {
+                    NewPrestige();
                     _saveData.CookieCount -= _saveData.NeededForPrestige;
                     _saveData.PrestigeLevel++;
-                    NewPrestige();
                 }
                 else if (result == DialogResult.No)
                 {
