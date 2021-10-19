@@ -1,6 +1,6 @@
 {
   "PointsPerClick": 1,
-  "CookieCount": 9,
+  "CookieCount": 26,
   "ClickerCount": 0,
   "PrestigeLevel": 1,
   "NeededForPrestige": 5000,
@@ -89,13 +89,13 @@
         "Name": "Stuff Creator",
         "CookiesPerSecond": 250,
         "Price": 50000,
-        "Description": "When buying your mom you will get:\n250 clicks per second automatically."
+        "Description": "When buying this creator you will get:\n250 clicks per second automatically."
       },
       {
         "Name": "Empty Head",
         "CookiesPerSecond": 275,
         "Price": 55000,
-        "Description": "When buying your mom you will get:\n275 clicks per second automatically."
+        "Description": "When buying this head you will get:\n275 clicks per second automatically."
       }
     ]
   },

@@ -135,7 +135,7 @@ namespace ClickerGame
                         UpdateUI();
                     }
 
-                    _saveData.PointsPerClick *= 2;
+                    _saveData.PointsPerClick = _saveData.PointsPerClick* 2;
 
                     UpdateUI();
                 }
