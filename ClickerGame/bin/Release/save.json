@@ -1,8 +1,8 @@
 {
   "PointsPerClick": 1,
-  "CookieCount": 1250,
+  "CookieCount": 9,
   "ClickerCount": 0,
-  "PrestigeLevel": 0,
+  "PrestigeLevel": 1,
   "NeededForPrestige": 5000,
   "ShopData": {
     "PointsNeeded": 50,
@@ -100,8 +100,6 @@
     ]
   },
   "BoughtItems": {
-    "Google Click Bot": 0,
-    "Juice Creator": 1,
-    "Stepsis": 0
+    "Google Click Bot": 0
   }
 }
