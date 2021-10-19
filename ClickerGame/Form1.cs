@@ -129,7 +129,7 @@ namespace ClickerGame
 
                     foreach (var boughtItem in _saveData.BoughtItems)
                     {
-                        lbxOwnedItems.Items.Remove($"{boughtItem.Value + 1}x {boughtItem.Key}");
+                        lbxOwnedItems.Items.Remove(boughtItem);
                         _saveData.BoughtItems.Remove(boughtItem.Key);
                     }
 

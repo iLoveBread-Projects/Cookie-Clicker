@@ -1,6 +1,6 @@
 {
   "PointsPerClick": 1,
-  "CookieCount": 12,
+  "CookieCount": 78,
   "ClickerCount": 0,
   "PrestigeLevel": 1,
   "NeededForPrestige": 10000,
@@ -100,6 +100,6 @@
     ]
   },
   "BoughtItems": {
-    "Google Click Bot": 0
+    "Google Click Bot": 1
   }
 }
