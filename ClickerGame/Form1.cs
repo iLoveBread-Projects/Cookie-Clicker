@@ -17,7 +17,7 @@ namespace ClickerGame
     public partial class frmClicker : Form
     {
         private SaveData _saveData;
-
+        public static int PrestigeLevel;
 
         public frmClicker()
         {
@@ -28,6 +28,8 @@ namespace ClickerGame
         private void frmApplication_Load(object sender, EventArgs e)
         {
             _saveData = Program.SaveData;
+
+            lblNeededForPrestige.Text = $"{_saveData.NeededForPrestige *= (PrestigeLevel + 1)} points";
 
             _saveData.ShopData.Items = new()
             {
@@ -87,8 +89,8 @@ namespace ClickerGame
             }
             catch (Exception)
             {
-                MessageBox.Show($"There was a problem opening the item shop. Please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                if (Debugger.IsAttached) throw;
+                MessageBox.Show($"Please select an item to buy", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
         }
 
@@ -107,31 +109,66 @@ namespace ClickerGame
 
             foreach (var item in _saveData.BoughtItems)
                 lbxOwnedItems.Items.Add($"{item.Value + 1}x {item.Key}");
+
+            lblPrestigeLevel.Text = $"Prestige: {_saveData.PrestigeLevel}";
         }
 
-        private void btnClickUpgrade_Click(object sender, EventArgs e)
+        private void NewPrestige()
         {
+            lblNeededForPrestige.Text = $"{_saveData.NeededForPrestige *= (_saveData.PrestigeLevel + 1)} points";
             try
             {
-                if (_saveData.CookieCount >= 500)
+                if (_saveData.CookieCount >= _saveData.NeededForPrestige)
                 {
-                    _saveData.CookieCount -= 500;
-                    _saveData.PointsPerClick += 1;
+                    frmShop f2 = new frmShop(ref _saveData);
+                    foreach (var item in _saveData.ShopData.Items)
+                    {
+                        var Price = f2.GetPrice(item, _saveData.BoughtItems.FirstOrDefault(x => x.Key == item.Name).Value);
+                        Price = item.Price;
+                    }
+
+                    foreach (var boughtItem in _saveData.BoughtItems)
+                    {
+                        lbxOwnedItems.Items.Remove($"{boughtItem.Value + 1}x {boughtItem.Key}");
+                        _saveData.BoughtItems.Remove(boughtItem.Key);
+                    }
+
+                    _saveData.PointsPerClick *= 2;
 
                     UpdateUI();
-                    MessageBox.Show($"You now have {_saveData.PointsPerClick} points per click", "Success", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 else
                 {
-                    MessageBox.Show($"You need {500 - _saveData.CookieCount} more points to afford this. Save a bit first", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
-
-                UpdateUI();
             }
             catch (Exception)
             {
-                MessageBox.Show($"There was a problem while upgrading the points per click you get. Please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                if (Debugger.IsAttached) throw;
+
+            }
+        }
+
+        private void btnUpgradePrestige_Click(object sender, EventArgs e)
+        {
+            if (_saveData.CookieCount >= _saveData.NeededForPrestige)
+            {
+                DialogResult result = MessageBox.Show("Are you sure that you want to reset your progress and upgrade a prestige?\n\nYou will get double the points per click than you have right now in exchange for the reset.", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (result == DialogResult.Yes)
+                {
+                    _saveData.CookieCount -= _saveData.NeededForPrestige;
+                    _saveData.PrestigeLevel++;
+                    NewPrestige();
+                }
+                else if (result == DialogResult.No)
+                {
+                    return;
+                }
+            }
+            else
+            {
+                MessageBox.Show($"Not enough points\n\n{_saveData.NeededForPrestige - _saveData.CookieCount} more points needed", "Stop", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return;
             }
         }
     }

@@ -38,7 +38,9 @@ namespace ClickerGame
             this.lbxOwnedItems = new System.Windows.Forms.ListBox();
             this.lblOwned = new System.Windows.Forms.Label();
             this.tmrAutoClick = new System.Windows.Forms.Timer(this.components);
-            this.btnClickUpgrade = new System.Windows.Forms.Button();
+            this.btnUpgradePrestige = new System.Windows.Forms.Button();
+            this.lblNeededForPrestige = new System.Windows.Forms.Label();
+            this.lblPrestigeLevel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnClicker
@@ -100,22 +102,42 @@ namespace ClickerGame
             // 
             this.tmrAutoClick.Interval = 1000;
             // 
-            // btnClickUpgrade
+            // btnUpgradePrestige
             // 
-            this.btnClickUpgrade.Location = new System.Drawing.Point(156, 32);
-            this.btnClickUpgrade.Name = "btnClickUpgrade";
-            this.btnClickUpgrade.Size = new System.Drawing.Size(96, 40);
-            this.btnClickUpgrade.TabIndex = 22;
-            this.btnClickUpgrade.Text = "Upgrade Click Earnings";
-            this.btnClickUpgrade.UseVisualStyleBackColor = true;
-            this.btnClickUpgrade.Click += new System.EventHandler(this.btnClickUpgrade_Click);
+            this.btnUpgradePrestige.Location = new System.Drawing.Point(118, 66);
+            this.btnUpgradePrestige.Name = "btnUpgradePrestige";
+            this.btnUpgradePrestige.Size = new System.Drawing.Size(134, 25);
+            this.btnUpgradePrestige.TabIndex = 20;
+            this.btnUpgradePrestige.Text = "Upgrade Prestige";
+            this.btnUpgradePrestige.UseVisualStyleBackColor = true;
+            this.btnUpgradePrestige.Click += new System.EventHandler(this.btnUpgradePrestige_Click);
+            // 
+            // lblNeededForPrestige
+            // 
+            this.lblNeededForPrestige.AutoSize = true;
+            this.lblNeededForPrestige.Location = new System.Drawing.Point(118, 94);
+            this.lblNeededForPrestige.Name = "lblNeededForPrestige";
+            this.lblNeededForPrestige.Size = new System.Drawing.Size(137, 13);
+            this.lblNeededForPrestige.TabIndex = 21;
+            this.lblNeededForPrestige.Text = "*NeededForPrestige* points";
+            // 
+            // lblPrestigeLevel
+            // 
+            this.lblPrestigeLevel.AutoSize = true;
+            this.lblPrestigeLevel.Location = new System.Drawing.Point(141, 50);
+            this.lblPrestigeLevel.Name = "lblPrestigeLevel";
+            this.lblPrestigeLevel.Size = new System.Drawing.Size(85, 13);
+            this.lblPrestigeLevel.TabIndex = 22;
+            this.lblPrestigeLevel.Text = "Prestige: *Level*";
             // 
             // frmClicker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(379, 148);
-            this.Controls.Add(this.btnClickUpgrade);
+            this.ClientSize = new System.Drawing.Size(380, 147);
+            this.Controls.Add(this.lblPrestigeLevel);
+            this.Controls.Add(this.lblNeededForPrestige);
+            this.Controls.Add(this.btnUpgradePrestige);
             this.Controls.Add(this.lblOwned);
             this.Controls.Add(this.lbxOwnedItems);
             this.Controls.Add(this.btnShop);
@@ -143,7 +165,9 @@ namespace ClickerGame
         private System.Windows.Forms.ListBox lbxOwnedItems;
         private System.Windows.Forms.Label lblOwned;
         private System.Windows.Forms.Timer tmrAutoClick;
-        private System.Windows.Forms.Button btnClickUpgrade;
+        private System.Windows.Forms.Button btnUpgradePrestige;
+        private System.Windows.Forms.Label lblNeededForPrestige;
+        private System.Windows.Forms.Label lblPrestigeLevel;
     }
 }
 

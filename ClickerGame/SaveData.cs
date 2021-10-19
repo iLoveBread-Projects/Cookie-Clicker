@@ -11,6 +11,8 @@ namespace ClickerGame
         public int PointsPerClick { get; set; } = 1;
         public int CookieCount { get; set; } = 0;
         public int ClickerCount { get; set; } = 0;
+        public int PrestigeLevel { get; set; } = 0;
+        public int NeededForPrestige { get; set; } = 5000;
         public ShopData ShopData { get; set; } = new();
         public Dictionary<string, int> BoughtItems {get;set;} = new();
     }

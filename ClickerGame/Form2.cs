@@ -42,6 +42,7 @@ namespace ClickerGame
             
             lblPriceExplained.Text = "NOTE:\nAfter purchase of 2 of the same items.\nThe price will go up each purchase.";
             lblExplained.Text = "";
+            lblItemPrice.Text = "";
         }
 
         private void btnBuy_Click(object sender, EventArgs e)
@@ -83,11 +84,13 @@ namespace ClickerGame
         private void lbxItems_SelectedIndexChanged(object sender, EventArgs e)
         {
             selectedItem = lbxItems.SelectedItem.ToString();
+            var item = _saveData.ShopData.Items.First(x => x.Name == selectedItem);
 
             lblExplained.Text = _saveData.ShopData.Items.First(x => x.Name == selectedItem).Description;
+            lblItemPrice.Text = $"Price: {item.Price * (_saveData.BoughtItems.FirstOrDefault(x => x.Key == selectedItem).Value + 1)}";
         }
 
-        private int GetPrice(Item item, int currentAmount)
+        public int GetPrice(Item item, int currentAmount)
         {
             return item.Price * (currentAmount + 1);
         }

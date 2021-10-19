@@ -1,7 +1,9 @@
 {
   "PointsPerClick": 1,
-  "CookieCount": 39,
+  "CookieCount": 4999,
   "ClickerCount": 0,
+  "PrestigeLevel": 0,
+  "NeededForPrestige": 5000,
   "ShopData": {
     "PointsNeeded": 50,
     "Items": [
@@ -82,10 +84,20 @@
         "CookiesPerSecond": 200,
         "Price": 40000,
         "Description": "When buying your mom you will get:\n200 clicks per second automatically."
+      },
+      {
+        "Name": "Stuff Creator",
+        "CookiesPerSecond": 250,
+        "Price": 50000,
+        "Description": "When buying your mom you will get:\n250 clicks per second automatically."
+      },
+      {
+        "Name": "Empty Head",
+        "CookiesPerSecond": 275,
+        "Price": 55000,
+        "Description": "When buying your mom you will get:\n275 clicks per second automatically."
       }
     ]
   },
-  "BoughtItems": {
-    "Google Click Bot": 0
-  }
+  "BoughtItems": {}
 }

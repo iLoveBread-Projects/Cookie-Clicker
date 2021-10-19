@@ -1,7 +1,9 @@
 {
   "PointsPerClick": 1,
-  "CookieCount": 925,
+  "CookieCount": 12,
   "ClickerCount": 0,
+  "PrestigeLevel": 1,
+  "NeededForPrestige": 10000,
   "ShopData": {
     "PointsNeeded": 50,
     "Items": [
@@ -98,7 +100,6 @@
     ]
   },
   "BoughtItems": {
-    "Google Click Bot": 2,
-    "Juice Creator": 0
+    "Google Click Bot": 0
   }
 }

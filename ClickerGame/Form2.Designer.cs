@@ -35,6 +35,7 @@ namespace ClickerGame
             this.lblInfo = new System.Windows.Forms.Label();
             this.lblExplained = new System.Windows.Forms.Label();
             this.lblPriceExplained = new System.Windows.Forms.Label();
+            this.lblItemPrice = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnBuy
@@ -100,11 +101,21 @@ namespace ClickerGame
             this.lblPriceExplained.TabIndex = 7;
             this.lblPriceExplained.Text = "*ItemPriceExplained*";
             // 
+            // lblItemPrice
+            // 
+            this.lblItemPrice.AutoSize = true;
+            this.lblItemPrice.Location = new System.Drawing.Point(110, 205);
+            this.lblItemPrice.Name = "lblItemPrice";
+            this.lblItemPrice.Size = new System.Drawing.Size(89, 13);
+            this.lblItemPrice.TabIndex = 8;
+            this.lblItemPrice.Text = "Price: *ItemPrice*";
+            // 
             // frmShop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(210, 302);
+            this.Controls.Add(this.lblItemPrice);
             this.Controls.Add(this.lblPriceExplained);
             this.Controls.Add(this.lblExplained);
             this.Controls.Add(this.lblInfo);
@@ -128,5 +139,6 @@ namespace ClickerGame
         private System.Windows.Forms.Label lblInfo;
         private System.Windows.Forms.Label lblExplained;
         private System.Windows.Forms.Label lblPriceExplained;
+        private System.Windows.Forms.Label lblItemPrice;
     }
 }

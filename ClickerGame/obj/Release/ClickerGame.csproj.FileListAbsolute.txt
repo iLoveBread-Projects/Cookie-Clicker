@@ -10,5 +10,4 @@ C:\Users\Administrator\Desktop\GitHub projects\Cookie-Clicker\ClickerGame\obj\Re
 C:\Users\Administrator\Desktop\GitHub projects\Cookie-Clicker\ClickerGame\obj\Release\ClickerGame.csproj.CoreCompileInputs.cache
 C:\Users\Administrator\Desktop\GitHub projects\Cookie-Clicker\ClickerGame\obj\Release\ClickerGame.exe
 C:\Users\Administrator\Desktop\GitHub projects\Cookie-Clicker\ClickerGame\obj\Release\ClickerGame.pdb
-C:\Users\Administrator\Desktop\GitHub projects\Cookie-Clicker\ClickerGame\obj\Release\ClickerGame.csproj.AssemblyReference.cache
 C:\Users\Administrator\Desktop\GitHub projects\Cookie-Clicker\ClickerGame\obj\Release\ClickerGame.csproj.CopyComplete
