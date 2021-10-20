@@ -128,12 +128,8 @@ namespace ClickerGame
                         Price = item.Price;
                     }
 
-                    foreach (var boughtItem in _saveData.BoughtItems)
-                    {
-                        _saveData.BoughtItems.Clear();
-                        lbxOwnedItems.Items.Clear();
-                        UpdateUI();
-                    }
+                    _saveData.BoughtItems.Clear();
+                    lbxOwnedItems.Items.Clear();
 
                     _saveData.PointsPerClick = _saveData.PointsPerClick* 2;
 
@@ -146,7 +142,8 @@ namespace ClickerGame
             }
             catch (Exception)
             {
-
+                MessageBox.Show("There went something wrong with the prestige upgrade", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
         }
 
