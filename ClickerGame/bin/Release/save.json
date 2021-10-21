@@ -1,9 +1,9 @@
 {
-  "PointsPerClick": 1,
-  "CookieCount": 160,
+  "PointsPerClick": 2,
+  "CookieCount": 250,
   "ClickerCount": 0,
-  "PrestigeLevel": 0,
-  "NeededForPrestige": 5000,
+  "PrestigeLevel": 1,
+  "NeededForPrestige": 0,
   "ShopData": {
     "PointsNeeded": 50,
     "Items": [
@@ -20,7 +20,7 @@
         "Description": "When buying this bot you will get:\n2 clicks per second automatically."
       },
       {
-        "Name": "Stepsis",
+        "Name": "Stuck Stepsis",
         "CookiesPerSecond": 5,
         "Price": 250,
         "Description": "When buying her you will get:\n5 clicks per second automatically."
@@ -96,11 +96,44 @@
         "CookiesPerSecond": 275,
         "Price": 55000,
         "Description": "When buying this head you will get:\n275 clicks per second automatically."
+      },
+      {
+        "Name": "Good Rapper",
+        "CookiesPerSecond": 300,
+        "Price": 65000,
+        "Description": "When buying this rapper you will get:\n300 clicks per second automatically."
+      },
+      {
+        "Name": "Insane Stunter",
+        "CookiesPerSecond": 350,
+        "Price": 75000,
+        "Description": "When buying this stunter you will get:\n350 clicks per second automatically."
+      },
+      {
+        "Name": "Discord Mod",
+        "CookiesPerSecond": 375,
+        "Price": 80000,
+        "Description": "When buying this mod you will get:\n375 clicks per second automatically."
+      },
+      {
+        "Name": "Lil Bun",
+        "CookiesPerSecond": 400,
+        "Price": 85000,
+        "Description": "When buying this bun you will get:\n400 clicks per second automatically."
+      },
+      {
+        "Name": "Just A Thing",
+        "CookiesPerSecond": 425,
+        "Price": 90000,
+        "Description": "When buying this thing you will get:\n425 clicks per second automatically."
+      },
+      {
+        "Name": "Juice Extractor",
+        "CookiesPerSecond": 475,
+        "Price": 1000000,
+        "Description": "When buying this extractor you will get:\n475 clicks per second automatically."
       }
     ]
   },
-  "BoughtItems": {
-    "Google Click Bot": 0,
-    "Juice Creator": 1
-  }
+  "BoughtItems": {}
 }

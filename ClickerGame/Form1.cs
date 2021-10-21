@@ -35,7 +35,7 @@ namespace ClickerGame
             {
                 new Item() { Name = "Google Click Bot", CookiesPerSecond = 1, Price = 50, Description = "When buying this bot you will get:\n1 click per second automatically." },
                 new Item() { Name = "Juice Creator", CookiesPerSecond = 2, Price = 100, Description = "When buying this bot you will get:\n2 clicks per second automatically." },
-                new Item() { Name = "Stepsis", CookiesPerSecond = 5, Price = 250, Description = "When buying her you will get:\n5 clicks per second automatically." },
+                new Item() { Name = "Stuck Stepsis", CookiesPerSecond = 5, Price = 250, Description = "When buying her you will get:\n5 clicks per second automatically." },
                 new Item() { Name = "Cow Milker", CookiesPerSecond = 10, Price = 500, Description = "When buying this milker you will get:\n10 clicks per second automatically." },
                 new Item() { Name = "Russian Dancer", CookiesPerSecond = 20, Price = 1000, Description = "When buying this dancer you will get:\n20 clicks per second automatically." },
                 new Item() { Name = "Cookie Extractor", CookiesPerSecond = 25, Price = 2500, Description = "When buying this extractor you will get:\n25 clicks per second automatically." },
@@ -47,7 +47,13 @@ namespace ClickerGame
                 new Item() { Name = "Your Mom", CookiesPerSecond = 175, Price = 35000, Description = "When buying your mom you will get:\n175 clicks per second automatically." },
                 new Item() { Name = "Cookie Friender", CookiesPerSecond = 200, Price = 40000, Description = "When buying your mom you will get:\n200 clicks per second automatically." },
                 new Item() { Name = "Stuff Creator", CookiesPerSecond = 250, Price = 50000, Description = "When buying this creator you will get:\n250 clicks per second automatically." },
-                new Item() { Name = "Empty Head", CookiesPerSecond = 275, Price = 55000, Description = "When buying this head you will get:\n275 clicks per second automatically." }
+                new Item() { Name = "Empty Head", CookiesPerSecond = 275, Price = 55000, Description = "When buying this head you will get:\n275 clicks per second automatically." },
+                new Item() { Name = "Good Rapper", CookiesPerSecond = 300, Price = 65000, Description = "When buying this rapper you will get:\n300 clicks per second automatically." },
+                new Item() { Name = "Insane Stunter", CookiesPerSecond = 350, Price = 75000, Description = "When buying this stunter you will get:\n350 clicks per second automatically." },
+                new Item() { Name = "Discord Mod", CookiesPerSecond = 375, Price = 80000, Description = "When buying this mod you will get:\n375 clicks per second automatically." },
+                new Item() { Name = "Lil Bun", CookiesPerSecond = 400, Price = 85000, Description = "When buying this bun you will get:\n400 clicks per second automatically." },
+                new Item() { Name = "Just A Thing", CookiesPerSecond = 425, Price = 90000, Description = "When buying this thing you will get:\n425 clicks per second automatically." },
+                new Item() { Name = "Juice Extractor", CookiesPerSecond = 475, Price = 1000000, Description = "When buying this extractor you will get:\n475 clicks per second automatically." }
             };
             
             // Create a timer that ticks every second.
@@ -112,11 +118,12 @@ namespace ClickerGame
 
             lblPrestigeLevel.Text = $"Prestige: {_saveData.PrestigeLevel}";
             lblNeededForPrestige.Text = $"{_saveData.NeededForPrestige *= (PrestigeLevel + 1)} points";
+
+            lblNeededForPrestige.Text = $"{_saveData.NeededForPrestige *= (_saveData.PrestigeLevel + 1)} points";
         }
 
         private void NewPrestige()
         {
-            lblNeededForPrestige.Text = $"{_saveData.NeededForPrestige *= (_saveData.PrestigeLevel + 1)} points";
             try
             {
                 if (_saveData.CookieCount >= _saveData.NeededForPrestige)

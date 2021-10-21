@@ -52,22 +52,6 @@ namespace ClickerGame
             // 
             this.lbxItems.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbxItems.FormattingEnabled = true;
-            this.lbxItems.Items.AddRange(new object[] {
-            "Google Click Bot",
-            "Juice Creator",
-            "Stepsis",
-            "Cow Milker",
-            "Russian Dancer",
-            "Cookie Extractor",
-            "Milky Miner",
-            "Invalid Cookie Discarder",
-            "Price Checker",
-            "Dad\'s Juice",
-            "Cookie Generator",
-            "Your Mom",
-            "Cookie Friender",
-            "Stuff Creator",
-            "Empty Head"});
             this.lbxItems.Location = new System.Drawing.Point(15, 55);
             this.lbxItems.Name = "lbxItems";
             this.lbxItems.Size = new System.Drawing.Size(184, 147);
